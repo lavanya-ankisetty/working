@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Developer Journey</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(145deg, #2193b0, #6dd5ed);
+      animation: slideInDown 1s ease-out;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header h2 {
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 20px 0;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s ease forwards;
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #00e0ff;
+    }
+    .card p {
+      line-height: 1.6;
+    }
+    .button-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .button-section h3 {
+      margin-bottom: 20px;
+    }
+    .btn-3d {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 25px;
+      font-size: 16px;
+      color: white;
+      background: linear-gradient(145deg, #00c6ff, #0072ff);
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 6px 0 #005bb5;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-3d:hover {
+      box-shadow: 0 4px 0 #004494;
+      transform: translateY(2px);
+    }
+    @keyframes slideInDown {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>From Internship to Full-Time Developer</h1>
+    <h2>My Journey through Java, .NET and Database Services</h2>
+  </header>
+
+  <section>
+    <div class="card">
+      <h3>🚀 Introduction</h3>
+      <p>My journey began with a Java internship where I developed a Mini Swiggy project. This hands-on experience laid the foundation for my full-time job, where I now work on backend systems using Java, .NET, and database services.</p>
+    </div>
+
+    <div class="card">
+      <h3>🍽️ Mini Swiggy Project in Java</h3>
+      <p>This project included user login, viewing restaurants, placing orders, and tracking status. It strengthened my Java fundamentals and taught me how real-world systems work.</p>
+    </div>
+
+    <div class="card">
+      <h3>💼 Full-Time Developer Role</h3>
+      <p>In my full-time role, I have worked deeply as a SQL Developer, developing robust database services. Additionally, I handled console-based backend development and testing using both .NET and Java. This has improved my technical depth and problem-solving capabilities in a production environment.</p>
+     </div>
+
+    <div class="card">
+      <h3>⚙️ Java and .NET Experience</h3>
+      <p>Using both platforms has improved my coding style, helped me compare syntax, and taught me how to structure clean and efficient programs across technologies.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧠 Skills and Growth</h3>
+      <p>I’ve built strong problem-solving skills, mastered SQL, and gained confidence in backend development. These skills have helped me understand the core logic and system design better.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔮 What’s Next</h3>
+      <p>I'm aiming to learn Spring Boot, Advanced Java, REST APIs, and move towards full-stack development and cloud technologies. I’m excited to keep growing!</p>
+    </div>
+
+    <div class="card">
+      <h3>✅ Conclusion</h3>
+      <p>From a Mini Swiggy app to working in production systems, my journey reflects growth, curiosity, and commitment. My advice: keep learning, keep building, and stay consistent.</p>
+    </div>
+  </section>
+
+  <div class="button-section">
+    <h3>Interested to Know More?</h3>
+    <button class="btn-3d" onclick="window.open('https://in.linkedin.com/in/lavanya-ankisetty-0587b1351/', '_blank')">🔗 See My LinkedIn</button>
+    <button class="btn-3d" onclick="window.open('https://your-portfolio-url.com', '_blank')">🌐 Visit My Portfolio</button>
+  </div>
+
+  <script>
+    // Animate cards on scroll
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeInUp 1s ease forwards';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
